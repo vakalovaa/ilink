@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: stage-db
+    environment:
+      POSTGRES_USER: vakalovaa
+      POSTGRES_PASSWORD: qhtlqfkarehg1526df
+      POSTGRES_DB: banksdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - stage-data:/var/lib/postgresql/data
+
+volumes:
+  stage-data:
